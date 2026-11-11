@@ -9,7 +9,7 @@ metadata:
 spec:
   title: "Vercel's Fastify template on Cloudflare Workers"
   summary: "Vercel's Fastify on Vercel template — a Fastify server whose one route answers with the template's welcome page, its logger on — runs as one Cloudflare Worker through the runtime's Node.js HTTP server support, booted once when the Worker starts, beside a health route, inside the Cirrus baseline's repository conventions, and becomes an Orun baseline that takes a new Fastify server from nothing to live on stage and prod in one landing."
-  state: started
+  state: completed
   milestones:
     - name: "FY0 — the spec"
       exitCriteria:
