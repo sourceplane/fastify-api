@@ -1,0 +1,30 @@
+# The epic's declaration. metadata.name equals the directory name; metadata.key
+# is the task-key prefix this epic reserves (FY → FY-1, FY-2, …). Owner, target
+# date and health are the platform's — never written here.
+apiVersion: orun.io/v1
+kind: Epic
+metadata:
+  name: fastify-api
+  key: FY
+spec:
+  title: "Vercel's Fastify template on Cloudflare Workers"
+  summary: "Vercel's Fastify on Vercel template — a Fastify server whose one route answers with the template's welcome page, its logger on — runs as one Cloudflare Worker through the runtime's Node.js HTTP server support, booted once when the Worker starts, beside a health route, inside the Cirrus baseline's repository conventions, and becomes an Orun baseline that takes a new Fastify server from nothing to live on stage and prod in one landing."
+  state: started
+  milestones:
+    - name: "FY0 — the spec"
+      exitCriteria:
+        - "the repository is born with its intent, CI, tooling and spec index, and this doc set and the task contracts are on main"
+      tasks: [FY-1]
+    - name: "FY1 — Fastify on Workers"
+      exitCriteria:
+        - "apps/api is the upstream Fastify app (src/server.ts, its one route, its logger on) started by upstream's fastify.listen, awaited at the Worker's startup in src/worker.ts and handed every request by httpServerHandler from cloudflare:node, bundled by wrangler as the Worker the committed wrangler.jsonc names, with a /health route and one name seam"
+        - "`pnpm typecheck`, `pnpm lint`, `pnpm test` and `pnpm build` are green, the tests serving the same Fastify instance on Node and calling every route over HTTP"
+        - "`wrangler dev` answers the welcome page, /health for its environment, Fastify's 404 and its 400, with one boot for every request and pino's lines in the Worker's log"
+        - "the README says how to run, test and deploy it, and how every Vercel piece maps to Cloudflare"
+      tasks: [FY-2]
+    - name: "FY2 — a baseline"
+      exitCriteria:
+        - "blueprint.yaml (the console card) and repo-blueprint.yaml (the build) take a new Fastify server from nothing to live on stage and prod in one landing, then record it"
+        - "an app built from it carries the app only, renamed throughout to its own name, repository and Worker, with the example's licence intact"
+        - "Baseline CI is green: contract tests, generated component docs, the blueprint read by the pinned orun, the leak gate, the offline bootstrap and the end-to-end tier — the stage lane's steps in a staged job tree, the Worker smoke-tested and every route read"
+      tasks: [FY-3]
