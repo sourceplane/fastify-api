@@ -4,7 +4,7 @@
 |---|---|---|
 | FY0 — the spec | ✅ | FY-1 |
 | FY1 — Fastify on Workers | ✅ | FY-2 |
-| FY2 — a baseline | planned | FY-3 |
+| FY2 — a baseline | ✅ | FY-3, tagged `baseline-v1` |
 
 ## Departures from the upstream template
 
