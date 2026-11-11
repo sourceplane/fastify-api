@@ -7,6 +7,6 @@ folder is the adoption; the merge creates the epic in the workspace.
 
 | Epic | Cluster | Status | What it is |
 |------|---------|--------|------------|
-| [`fastify-api/`](./fastify-api/) | **FY** | In progress (FY0) | Vercel's Fastify on Vercel template, its instance and route kept, booted at the Worker's startup behind the runtime's Node.js HTTP server support in one Cloudflare Worker — and an Orun baseline that instantiates it in one landing (FY2) |
+| [`fastify-api/`](./fastify-api/) | **FY** | In progress (FY1: the site on Workers) | Vercel's Fastify on Vercel template, its instance and route kept, booted at the Worker's startup behind the runtime's Node.js HTTP server support in one Cloudflare Worker — and an Orun baseline that instantiates it in one landing (FY2) |
 
 As-built ≠ intent: what shipped lives in each epic's `IMPLEMENTATION-STATUS.md`.
