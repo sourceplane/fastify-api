@@ -1,0 +1,17 @@
+apiVersion: orun.io/v1
+kind: TaskContract
+metadata:
+  name: FY-2
+  title: "Fastify on Workers"
+spec:
+  goal: Vercel's Fastify on Vercel template runs as one Cloudflare Worker — the template's Fastify instance, its logger on, started by upstream's fastify.listen at the Worker's startup and handed every request by httpServerHandler from cloudflare:node, bundled by wrangler — with its tests, and its README saying how it maps to Vercel
+  affects:
+    - apps/api
+    - tests/api
+    - pnpm-lock.yaml
+    - pnpm-workspace.yaml
+    - README.md
+  doneWhen:
+    - pnpm typecheck, lint, test and build are green
+    - wrangler dev answers the welcome page, /health, Fastify's 404 and its 400, with one boot for every request
+  gates: []
