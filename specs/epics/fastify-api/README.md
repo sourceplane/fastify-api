@@ -12,7 +12,7 @@ makes a copy of it somebody else's app in one landing.**
 
 | | |
 |---|---|
-| Status | In progress — FY0 on main |
+| Status | In progress — FY1 on main: the site runs on Workers |
 | Upstream | [vercel/vercel `examples/fastify`](https://github.com/vercel/vercel/tree/main/examples/fastify) (Apache-2.0), at `84878e5` (2026-10-27; the example last changed in `6e28030`) |
 | Reference | [express-api](https://github.com/sourceplane/express-api) — the same Node HTTP server behind `httpServerHandler`, its scaffolding, tests and bootstrap; [elysia-api](https://github.com/sourceplane/elysia-api) — the same Vercel welcome page on a framework that compiles at startup |
 | Key | `FY` |
